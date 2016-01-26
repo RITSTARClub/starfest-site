@@ -106,7 +106,7 @@
 		}
 		
 		#title {
-			margin: 16px 0;
+			margin: 16px 0 0;
 			color: {color:Link};
 			font-size: 50px;
 			font-weight: bold;
@@ -125,10 +125,17 @@
 			#title a {
 				text-decoration: none;
 			}
+		@media (max-width: 600px) {
+			#title {
+				background-image: none;
+			}
+		}
 		
 		#nav {
 			float: right;
+			white-space: nowrap;
 			margin-top: -128px;
+			margin-right: 32px;
 			color: {color:Background};
 			font-family: {font:Accent}, Roboto, Helvetica, Arial, sans-serif;
 		}
@@ -149,21 +156,26 @@
 					height: 28px;
 					margin-bottom: -4px;
 				}
-				#nav a.social {
-					margin-right: 4px;
+				#nav .social {
+					white-space: nowrap;
 				}
-					#nav a.social:active {
-						-webkit-filter: brightness(1.2);
-								filter: brightness(1.2);
+					#nav .social a {
+						margin-right: 4px;
 					}
-			@media (max-width: 1200px) {
-				#nav {
-					float: none;
-					margin-top: 0;
-					margin-bottom: 16px;
-					text-align: center;
-				}
+						#nav .social a:active {
+							-webkit-filter: brightness(1.2);
+									filter: brightness(1.2);
+						}
+		@media (max-width: 1200px) {
+			#nav {
+				float: none;
+				white-space: normal;
+				margin-top: 0;
+				margin-right: 0;
+				margin-bottom: 16px;
+				text-align: center;
 			}
+		}
 		
 		#content {
 			width: 560px;
@@ -575,9 +587,11 @@
 		{/block:HasPages}
 		{block:AskEnabled}<a href="/ask">Ask</a>{/block:AskEnabled}
 		{block:SubmissionsEnabled}<a href="/submit">{SubmitLabel}</a>{/block:SubmissionsEnabled}
-		{block:IfGooglePlusURL}<a href="{text:Google Plus URL}" target="_blank" class="social"><img src="{image:GooglePlusIcon}" alt="Google+" /></a>{/block:IfGooglePlusURL}
-		{block:IfFacebookURL}<a href="{text:Facebook URL}" target="_blank" class="social"><img src="{image:FacebookIcon}" alt="Facebook" /></a>{/block:IfFacebookURL}
-		{block:IfTwitterURL}<a href="{text:Twitter URL}" target="_blank" class="social"><img src="{image:TwitterIcon}" alt="Twitter" /></a>{/block:IfTwitterURL}
+		<span class="social">
+			{block:IfGooglePlusURL}<a href="{text:Google Plus URL}" target="_blank"><img src="{image:GooglePlusIcon}" alt="Google+" /></a>{/block:IfGooglePlusURL}
+			{block:IfFacebookURL}<a href="{text:Facebook URL}" target="_blank"><img src="{image:FacebookIcon}" alt="Facebook" /></a>{/block:IfFacebookURL}
+			{block:IfTwitterURL}<a href="{text:Twitter URL}" target="_blank"><img src="{image:TwitterIcon}" alt="Twitter" /></a>{/block:IfTwitterURL}
+		</span>
 		
 		<!--<a href="http://www.tumblr.com/follow/{Name}"><div class="heading" id="followontumblr">{lang:Follow on Tumblr}</div></a>-->
 		
