@@ -105,6 +105,16 @@
 			border: none;
 		}
 		
+		hr {
+			background-color: {color:Accent};
+			box-shadow: 0 0 6px 1px rgba(51,181,229,0.8);
+			border: 0 none;
+			height: 1px;
+			width: 90%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		
 		#title {
 			margin: 16px 0 0;
 			color: {color:Link};
@@ -178,26 +188,25 @@
 		}
 		
 		#content {
-			width: 560px;
+			width: 640px;
 			max-width: 100%;
 			margin: 0 auto;
 		}
-		
 			#content .post {
-				background-color: {color:ContentBackground};
-				font-family: {font:Body}, Roboto, Helvetica, Arial, sans-serif;
+				width: 560px;
+				max-width: 100%;
+				margin-left: auto;
+				margin-right: auto;
 				padding: 16px;
 				position: relative;
-				
-				border: 1px solid {color:Accent};
-				box-shadow: 0 0 14px 0 {color:Accent};
+				font-family: {font:Body}, Roboto, Helvetica, Arial, sans-serif;
 			}
 				
 				#content .post h1,
 				#content .post h2 {
 					font-family: {font:Accent};
 					font-weight: bold;
-					padding: 10px 10px 0 10px;
+					padding: 10px 10px 0 10px;	
 				}
 				#content .post h1 {
 					margin-top: 0;
@@ -475,7 +484,7 @@
 							padding-left: 15px;
 							border-left: solid 4px rgba(128,128,128,0.25);
 						}
-							/*#content .post .copy blockquote blockquote {
+							#content .post .copy blockquote blockquote {
 								border-left-color: rgba(128,128,128,0.3);
 							}
 								#content .post .copy blockquote blockquote blockquote {
@@ -483,14 +492,7 @@
 								}
 									#content .post .copy blockquote blockquote blockquote blockquote {
 										border-left-color: rgba(128,128,128,0.4);
-									}*/
-					
-					#content .bottom {
-						background: url('http://assets.tumblr.com/themes/redux/shadow-post.png') top center no-repeat transparent;
-						width: 513px;
-						height: 40px;
-						margin: 0 auto;
-					}
+									}
 					
 					#content #navigation {
 						text-align: right;
@@ -565,7 +567,7 @@
 		#footer {
 			text-align: center;
 			font-size: 12px;
-			margin-bottom: 10px;
+			margin: 16px auto;
 		}
 	</style>
 	<style type="text/css">{CustomCSS}</style>
@@ -762,7 +764,8 @@
 				
 				{block:PostNotes}<div class="notecontainer">{PostNotes}</div>{/block:PostNotes}
 			</div>
-			<div class="bottom"></div>
+			
+			<hr />
 		{/block:Posts}
 		
 		{block:Pagination}
@@ -797,7 +800,7 @@
 		&nbsp;&nbsp;&nbsp;&nbsp;
 		<a href="http://www.tumblr.com">{lang:Powered by Tumblr}</a>
 		&nbsp;&nbsp;&nbsp;&nbsp;
-		Theme by <a href="http://zmyaro.com" target="_blank">Zachary Yaro</a>
+		Designed by <a href="http://zmyaro.com" target="_blank">Zachary Yaro</a>
 	</footer>
 </body>
 </html>
