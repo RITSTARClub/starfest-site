@@ -193,6 +193,20 @@
 				box-shadow: 0 0 14px 0 {color:Accent};
 			}
 				
+				#content .post h1,
+				#content .post h2 {
+					font-family: {font:Accent};
+					font-weight: bold;
+					padding: 10px 10px 0 10px;
+				}
+				#content .post h1 {
+					margin-top: 0;
+				}
+				
+				#content .post img {
+				  max-width: 500px;
+				}
+				
 				#content .post .media {
 					text-align: center;
 					margin-bottom: 10px;
@@ -338,17 +352,7 @@
 					#content .post .asker_container a.asker {
 						/*color: {color:Body};*/
 					}
-				
-				#content .post .title {
-					font-size: 22px;
-					font-weight: bold;
-					padding: 10px 10px 0 10px;
-				}
-				
-				#content .post img {
-				  max-width: 500px;
-				}
-									
+								
 				#content .post .chat {
 					margin: 10px 10px 0 10px;
 					font-size: 14px;
@@ -687,7 +691,7 @@
 				{/block:Quote}
 					
 				{block:Text}
-					{block:Title}<div class="title">{Title}</div>{/block:Title}
+					{block:Title}<h1>{Title}</h1>{/block:Title}
 					<div class="copy">{Body}</div>
 				{/block:Text}
 				
@@ -701,7 +705,7 @@
 				{block:Answer}
 				
 				{block:Chat}
-					{block:Title}<div class="title">{Title}</div>{/block:Title}
+					{block:Title}<h1>{Title}</h1>{/block:Title}
 					<div class="chat">
 						<div class="lines">
 							{block:Lines}
