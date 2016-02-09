@@ -111,7 +111,8 @@
 			box-shadow: 0 0 6px 1px rgba(51,181,229,0.8);
 			border: 0 none;
 			height: 1px;
-			width: 90%;
+			width: 576px;
+			max-width: 90%;
 			margin-left: auto;
 			margin-right: auto;
 			position: relative;
@@ -192,9 +193,6 @@
 		}
 		
 		#content {
-			width: 640px;
-			max-width: 100%;
-			margin: 0 auto;
 		}
 			#content .post {
 				width: 560px;
@@ -202,6 +200,9 @@
 				margin-left: auto;
 				margin-right: auto;
 				padding: 16px;
+				-webkit-box-sizing: border-box;
+				   -moz-box-sizing: border-box;
+				        box-sizing: border-box;
 				position: relative;
 				font-family: {font:Body}, Roboto, Helvetica, Arial, sans-serif;
 				background-color: black;
@@ -285,7 +286,6 @@
 				#content .post .copy {
 					padding: 10px;
 					font-size: 14px;
-					line-height: 15px;
 				}
 				
 					#content .post .copy p {
@@ -656,7 +656,7 @@
 		{/block:SearchPage}
 		
 		{block:Posts}
-			<div class="post">
+			<div class="post"{block:Quote} style="width: auto;"{/block:Quote}>
 				
 				{block:Photo}
 					<div class="media">{LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}" />{LinkCloseTag}</div>
@@ -683,6 +683,7 @@
 				{/block:Audio}
 				
 				{block:Quote}
+					<!--
 					<div class="quote {Length}">{Quote}</div>
 					<div class="copy">
 						<div class="quotebg">“</div>
@@ -696,6 +697,20 @@
 								</tr>
 							</table>
 						{/block:Source}
+					</div>
+					-->
+					<!-- This is being used as a hacky workaround to only show social feeds when a quote post is active. -->
+					<div style="max-width: 100%; text-align: center;">
+						<div style="display: inline-block; width: 500px; max-width: 100%; overflow: hidden;">
+							<div class="fb-page" data-href="https://www.facebook.com/RITSTARfest/" data-tabs="timeline" data-width="500" data-height="700" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+								<div class="fb-xfbml-parse-ignore">
+									<blockquote cite="https://www.facebook.com/RITSTARfest/"><a href="https://www.facebook.com/RITSTARfest/">RITSTARfest on Facebook</a></blockquote>
+								</div>
+							</div>
+						</div>
+						<div style="display: inline-block; width: 500px; max-width: 100%; overflow: hidden;">
+						<a class="twitter-timeline" href="https://twitter.com/RITSTARfest" data-widget-id="696939701811462144">@RITSTARfest on Twitter</a>
+						</div>
 					</div>
 				{/block:Quote}
 					
@@ -809,5 +824,16 @@
 		&nbsp;&nbsp;&nbsp;&nbsp;
 		Theme by <a href="http://zmyaro.com" target="_blank">Zachary Yaro</a>
 	</footer>
+	
+	<!-- Facebook and Twitter APIs -->
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=224297864381251";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </body>
 </html>
