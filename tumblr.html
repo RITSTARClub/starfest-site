@@ -77,6 +77,7 @@
 			background-color: {color:Background};
 			background-image: url({image:BackgroundTile});
 			background-repeat: repeat;
+			background-attachment: fixed;
 			color: {color:Text};
 			margin:0;
 			padding:0;
@@ -113,6 +114,8 @@
 			width: 90%;
 			margin-left: auto;
 			margin-right: auto;
+			position: relative;
+			z-index: 1;
 		}
 		
 		#title {
@@ -123,9 +126,11 @@
 			font-family: {font:Title}, sans-serif;
 			text-shadow: 0px 0px 12px {color:Link};
 			
+			background-color: {color:Background};
 			background-image: url({image:HeaderLine});
 			background-size: 1px 165.5px;
 			background-repeat: repeat-x;
+			box-shadow: 0 0 16px 16px black;
 		}
 			#title img {
 				margin: 0;
@@ -146,7 +151,6 @@
 			white-space: nowrap;
 			margin-top: -128px;
 			margin-right: 32px;
-			color: {color:Background};
 			font-family: {font:Accent}, Roboto, Helvetica, Arial, sans-serif;
 		}
 			#nav a {
@@ -200,6 +204,8 @@
 				padding: 16px;
 				position: relative;
 				font-family: {font:Body}, Roboto, Helvetica, Arial, sans-serif;
+				background-color: black;
+				box-shadow: 0 0 16px 16px black;
 			}
 				
 				#content .post h1,
