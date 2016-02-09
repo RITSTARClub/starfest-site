@@ -108,7 +108,9 @@
 		
 		hr {
 			background-color: {color:Accent};
-			box-shadow: 0 0 6px 1px rgba(51,181,229,0.8);
+			-webkit-box-shadow: 0 0 6px 1px rgba(51,181,229,0.8);
+			   -moz-box-shadow: 0 0 6px 1px rgba(51,181,229,0.8);
+			        box-shadow: 0 0 6px 1px rgba(51,181,229,0.8);
 			border: 0 none;
 			height: 1px;
 			width: 576px;
@@ -131,7 +133,9 @@
 			background-image: url({image:HeaderLine});
 			background-size: 1px 165.5px;
 			background-repeat: repeat-x;
-			box-shadow: 0 0 16px 16px black;
+			-webkit-box-shadow: 0 0 16px 16px black;
+			   -moz-box-shadow: 0 0 16px 16px black;
+			        box-shadow: 0 0 16px 16px black;
 		}
 			#title img {
 				margin: 0;
@@ -199,14 +203,16 @@
 				max-width: 100%;
 				margin-left: auto;
 				margin-right: auto;
-				padding: 16px;
+				padding: 0;
 				-webkit-box-sizing: border-box;
 				   -moz-box-sizing: border-box;
 				        box-sizing: border-box;
 				position: relative;
 				font-family: {font:Body}, Roboto, Helvetica, Arial, sans-serif;
 				background-color: black;
-				box-shadow: 0 0 16px 16px black;
+				-webkit-box-shadow: 0 0 16px 16px black;
+				   -moz-box-shadow: 0 0 16px 16px black;
+				        box-shadow: 0 0 16px 16px black;
 			}
 				
 				#content .post h1,
@@ -656,7 +662,7 @@
 		{/block:SearchPage}
 		
 		{block:Posts}
-			<div class="post"{block:Quote} style="width: auto;"{/block:Quote}>
+			<div class="post"{block:Quote} style="width: auto; background-color: transparent; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none;"{/block:Quote}>
 				
 				{block:Photo}
 					<div class="media">{LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}" />{LinkCloseTag}</div>
@@ -747,7 +753,7 @@
 				{/block:Link}
 				
 				{block:Date}
-					<a href="{Permalink}">
+					<a href="{Permalink}"{block:Quote} style="display: none;"{/block:Quote}>
 						<div class="footer for_permalink">
 							<div class="date">
 								{block:Reblog}
