@@ -66,6 +66,9 @@
 	<title>{block:SearchPage}{lang:Search results for SearchQuery} - {/block:SearchPage}{block:PostSummary}{PostSummary} - {/block:PostSummary}{Title}</title>
 	{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
 	
+	<!-- Link site to G+ page -->
+	{block:IfGooglePlusURL}<link rel="publisher" href="{text:Google Plus URL}" />{/block:IfGooglePlusURL}
+	
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="shortcut icon" href="{Favicon}" />
 	<link rel="icon" href="{PortraitURL-128}"/>
