@@ -33,7 +33,7 @@
 -->
 <html lang="en">
 <head>
-	<!-- DEFAULT VARIABLES -->
+	<!-- Theme variables -->
 	<meta name="color:Background" content="#000000" />
 	<meta name="color:ContentBackground" content="#000000" />
 	<meta name="color:Text" content="#cccccc" />
@@ -57,24 +57,25 @@
 	<meta name="image:Header" content="" />
 	<meta name="image:HeaderLine" content="" />
 	<meta name="image:BackgroundTile" content="" />
-	<meta name="image:BackgroundPlanet" content="" />
 	<meta name="image:GooglePlusIcon" content="" />
 	<meta name="image:FacebookIcon" content="" />
 	<meta name="image:TwitterIcon" content="" />
 	
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	
 	<title>{block:SearchPage}{lang:Search results for SearchQuery} - {/block:SearchPage}{block:PostSummary}{PostSummary} - {/block:PostSummary}{Title}</title>
 	{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
 	
-	<!-- Link site to G+ page -->
-	{block:IfGooglePlusURL}<link rel="publisher" href="{text:Google Plus URL}" />{/block:IfGooglePlusURL}
+	{block:IfGooglePlusURL}<!-- Link site to G+ page -->
+	<link rel="publisher" href="{text:Google Plus URL}" />{/block:IfGooglePlusURL}
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="shortcut icon" href="{Favicon}" />
 	<link rel="icon" href="{PortraitURL-128}"/>
 	<link rel="apple-touch-icon-precomposed" href="{PortraitURL-128}"/>
-	<!--<link rel="alternate" type="application/rss+xml" href="{RSS}" />-->
+	
 	<meta name="theme-color" content="{color:Background}" />
+	
 	<style type="text/css">
 		/* Hide Tumblr bar */
 		.tmblr-iframe {
@@ -597,8 +598,8 @@
 			font-size: 12px;
 			margin: 16px auto;
 		}
+		{CustomCSS}
 	</style>
-	<style type="text/css">{CustomCSS}</style>
 </head>
 <body>
 	<header id="title">
