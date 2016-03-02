@@ -61,6 +61,34 @@
 	<meta name="image:FacebookIcon" content="" />
 	<meta name="image:TwitterIcon" content="" />
 	
+	
+	<meta name="text:Partner Name 1" content="" />
+	<meta name="text:Partner Link 1" content="" />
+	<meta name="image:Partner Logo 1" content="" />
+	<meta name="text:Partner Name 2" content="" />
+	<meta name="text:Partner Link 2" content="" />
+	<meta name="image:Partner Logo 2" content="" />
+	<meta name="text:Partner Name 3" content="" />
+	<meta name="text:Partner Link 3" content="" />
+	<meta name="image:Partner Logo 3" content="" />
+	<meta name="text:Partner Name 4" content="" />
+	<meta name="text:Partner Link 4" content="" />
+	<meta name="image:Partner Logo 4" content="" />
+	<meta name="text:Partner Name 5" content="" />
+	<meta name="text:Partner Link 5" content="" />
+	<meta name="image:Partner Logo 5" content="" />
+	<meta name="text:Partner Name 6" content="" />
+	<meta name="text:Partner Link 6" content="" />
+	<meta name="image:Partner Logo 6" content="" />
+	<meta name="text:Partner Name 7" content="" />
+	<meta name="text:Partner Link 7" content="" />
+	<meta name="image:Partner Logo 7" content="" />
+	<meta name="text:Partner Name 8" content="" />
+	<meta name="text:Partner Link 8" content="" />
+	<meta name="image:Partner Logo 8" content="" />
+	
+	<meta name="text:Google Analytics ID" content="" />
+	
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	
 	<title>{block:SearchPage}{lang:Search results for SearchQuery} - {/block:SearchPage}{block:PostSummary}{PostSummary} - {/block:PostSummary}{Title}</title>
@@ -598,6 +626,17 @@
 			font-size: 12px;
 			margin: 16px auto;
 		}
+		
+		#partners > a {
+			margin: 0 8px;
+		}
+		#partners > img {
+			margin: 0 8px;
+		}
+		#partners img {
+			height: 64px;
+		}
+		
 		{CustomCSS}
 	</style>
 </head>
@@ -838,6 +877,48 @@
 	{/block:Twitter}
 	
 	<footer id="footer">
+		<div id="partners">
+			{block:IfPartnerLink1}<a href="{text:Partner Link 1}" target="_blank">{/block:IfPartnerLink1}
+			{block:IfPartnerLogo1Image}<img src="{image:Partner Logo 1}"{block:IfPartnerName1} alt="{text:Partner Name 1}"{/block:IfPartnerName1} />{/block:IfPartnerLogo1Image}
+			{block:IfNotPartnerLogo1Image}{block:IfPartnerName1}{text:Partner Name 1}{/block:IfPartnerName1}{/block:IfNotPartnerLogo1Image}
+			{block:IfPartnerLink1}</a>{/block:IfPartnerLink1}
+			
+			{block:IfPartnerLink2}<a href="{text:Partner Link 2}" target="_blank">{/block:IfPartnerLink2}
+			{block:IfPartnerLogo2Image}<img src="{image:Partner Logo 2}"{block:IfPartnerName2} alt="{text:Partner Name 2}"{/block:IfPartnerName2} />{/block:IfPartnerLogo2Image}
+			{block:IfNotPartnerLogo2Image}{block:IfPartnerName2}{text:Partner Name 2}{/block:IfPartnerName2}{/block:IfNotPartnerLogo2Image}
+			{block:IfPartnerLink2}</a>{/block:IfPartnerLink2}
+			
+			{block:IfPartnerLink3}<a href="{text:Partner Link 3}" target="_blank">{/block:IfPartnerLink3}
+			{block:IfPartnerLogo3Image}<img src="{image:Partner Logo 3}"{block:IfPartnerName3} alt="{text:Partner Name 3}"{/block:IfPartnerName3} />{/block:IfPartnerLogo3Image}
+			{block:IfNotPartnerLogo3Image}{block:IfPartnerName3}{text:Partner Name 3}{/block:IfPartnerName3}{/block:IfNotPartnerLogo3Image}
+			{block:IfPartnerLink3}</a>{/block:IfPartnerLink3}
+			
+			{block:IfPartnerLink4}<a href="{text:Partner Link 4}" target="_blank">{/block:IfPartnerLink4}
+			{block:IfPartnerLogo4Image}<img src="{image:Partner Logo 4}"{block:IfPartnerName4} alt="{text:Partner Name 4}"{/block:IfPartnerName4} />{/block:IfPartnerLogo4Image}
+			{block:IfNotPartnerLogo4Image}{block:IfPartnerName4}{text:Partner Name 4}{/block:IfPartnerName4}{/block:IfNotPartnerLogo4Image}
+			{block:IfPartnerLink4}</a>{/block:IfPartnerLink4}
+			
+			{block:IfPartnerLink5}<a href="{text:Partner Link 5}" target="_blank">{/block:IfPartnerLink5}
+			{block:IfPartnerLogo5Image}<img src="{image:Partner Logo 5}"{block:IfPartnerName5} alt="{text:Partner Name 5}"{/block:IfPartnerName5} />{/block:IfPartnerLogo5Image}
+			{block:IfNotPartnerLogo5Image}{block:IfPartnerName5}{text:Partner Name 5}{/block:IfPartnerName5}{/block:IfNotPartnerLogo5Image}
+			{block:IfPartnerLink5}</a>{/block:IfPartnerLink5}
+			
+			{block:IfPartnerLink6}<a href="{text:Partner Link 6}" target="_blank">{/block:IfPartnerLink6}
+			{block:IfPartnerLogo6Image}<img src="{image:Partner Logo 6}"{block:IfPartnerName6} alt="{text:Partner Name 6}"{/block:IfPartnerName6} />{/block:IfPartnerLogo6Image}
+			{block:IfNotPartnerLogo6Image}{block:IfPartnerName6}{text:Partner Name 6}{/block:IfPartnerName6}{/block:IfNotPartnerLogo6Image}
+			{block:IfPartnerLink6}</a>{/block:IfPartnerLink6}
+			
+			{block:IfPartnerLink7}<a href="{text:Partner Link 7}" target="_blank">{/block:IfPartnerLink7}
+			{block:IfPartnerLogo7Image}<img src="{image:Partner Logo 7}"{block:IfPartnerName7} alt="{text:Partner Name 7}"{/block:IfPartnerName7} />{/block:IfPartnerLogo7Image}
+			{block:IfNotPartnerLogo7Image}{block:IfPartnerName7}{text:Partner Name 7}{/block:IfPartnerName7}{/block:IfNotPartnerLogo7Image}
+			{block:IfPartnerLink7}</a>{/block:IfPartnerLink7}
+			
+			{block:IfPartnerLink8}<a href="{text:Partner Link 8}" target="_blank">{/block:IfPartnerLink8}
+			{block:IfPartnerLogo8Image}<img src="{image:Partner Logo 8}"{block:IfPartnerName8} alt="{text:Partner Name 8}"{/block:IfPartnerName8} />{/block:IfPartnerLogo8Image}
+			{block:IfNotPartnerLogo8Image}{block:IfPartnerName8}{text:Partner Name 8}{/block:IfPartnerName8}{/block:IfNotPartnerLogo8Image}
+			{block:IfPartnerLink8}</a>{/block:IfPartnerLink8}
+		</div>
+		<br />
 		&copy; {CopyrightYears}
 		&nbsp;&nbsp;&nbsp;&nbsp;
 		<a href="http://www.tumblr.com">{lang:Powered by Tumblr}</a>
@@ -845,15 +926,28 @@
 		Theme by <a href="http://zmyaro.com" target="_blank">Zachary Yaro</a>
 	</footer>
 	
+	{block:IfGoogleAnalyticsId}
+	<script>
+		// Google Analytics
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', '{text:Google Analytics ID}', 'auto');
+		ga('send', 'pageview');
+	</script>
+	{/block:IfGoogleAnalyticsId}
 	<!-- Facebook and Twitter APIs -->
 	<div id="fb-root"></div>
-	<script>(function(d, s, id) {
-	  var js, fjs = d.getElementsByTagName(s)[0];
-	  if (d.getElementById(id)) return;
-	  js = d.createElement(s); js.id = id;
-	  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=224297864381251";
-	  fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));</script>
-	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	<script>
+		(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=224297864381251";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+		!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+	</script>
 </body>
 </html>
