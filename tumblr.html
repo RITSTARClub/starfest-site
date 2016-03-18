@@ -61,6 +61,22 @@
 	<meta name="image:FacebookIcon" content="" />
 	<meta name="image:TwitterIcon" content="" />
 	
+	<meta name="text:Featured Text 1" content="" />
+	<meta name="text:Featured Link 1" content="" />
+	<meta name="color:Featured Color 1" content="" />
+	<meta name="image:Featured Image 1" content="" />
+	<meta name="text:Featured Text 2" content="" />
+	<meta name="text:Featured Link 2" content="" />
+	<meta name="color:Featured Color 2" content="" />
+	<meta name="image:Featured Image 2" content="" />
+	<meta name="text:Featured Text 3" content="" />
+	<meta name="text:Featured Link 3" content="" />
+	<meta name="color:Featured Color 3" content="" />
+	<meta name="image:Featured Image 3" content="" />
+	<meta name="text:Featured Text 4" content="" />
+	<meta name="text:Featured Link 4" content="" />
+	<meta name="color:Featured Color 4" content="" />
+	<meta name="image:Featured Image 4" content="" />
 	
 	<meta name="text:Partner Name 1" content="" />
 	<meta name="text:Partner Link 1" content="" />
@@ -627,6 +643,30 @@
 			margin: 16px auto;
 		}
 		
+		.featuredImage {
+			display: inline-block;
+			width: 360px;
+			max-width: 100%;
+			margin: 8px 64px;
+			border: 1px solid;
+			text-shadow: 0 0 10px;
+			box-shadow: 0 0 10px 0, inset 0 0 10px 0;
+			
+			position: relative;
+			top: -10px;
+		}
+			.featuredImage img {
+				width: 100%;
+				margin-bottom: -4px;
+			}
+		
+		@media (max-width: 500px) {
+			.featuredImage {
+				margin: 4px 0px;
+				border-width: 1px 0;
+			}
+		}
+		
 		#partners > a {
 			margin: 0 8px;
 		}
@@ -758,8 +798,41 @@
 					-->
 					<!-- This is being used as a hacky workaround to only show social feeds when a quote post is active. -->
 					<h1 style="text-align: center; margin-bottom: 0.5em;">Annual RIT Sci-Fi Convention</h1>
-					<h2 style="text-align: center; margin-top: 0.5em;">Registration opens soon!</h2>
-					<div style="max-width: 100%; text-align: center;">
+					
+					<div style="width: 100%; max-width: 1200px; text-align: center; margin: 0 auto;">
+						{block:IfFeaturedText1}
+						<div class="featuredImage" style="color: {color:Featured Color 1};border-color: {color:Featured Color 1};">
+							{block:IfFeaturedLink1}<a href="{text:Featured Link 1}" target="_blank">{/block:IfFeaturedLink1}
+								{block:IfFeaturedImage1Image}<img src="{image:Featured Image 1}" alt="{text:Featured Text 1}" />{/block:IfFeaturedImage1Image}
+								{block:IfNotFeaturedImage1Image}{text:Featured Text 1}{/block:IfNotFeaturedImage1Image}
+							{block:IfFeaturedLink1}</a>{/block:IfFeaturedLink1}
+						</div>
+						{/block:IfFeaturedText1}
+						{block:IfFeaturedText2}
+						<div class="featuredImage" style="color: {color:Featured Color 2};border-color: {color:Featured Color 2};">
+							{block:IfFeaturedLink2}<a href="{text:Featured Link 2}" target="_blank">{/block:IfFeaturedLink2}
+								{block:IfFeaturedImage2Image}<img src="{image:Featured Image 2}" alt="{text:Featured Text 2}" />{/block:IfFeaturedImage2Image}
+								{block:IfNotFeaturedImage2Image}{text:Featured Text 2}{/block:IfNotFeaturedImage2Image}
+							{block:IfFeaturedLink2}</a>{/block:IfFeaturedLink2}
+						</div>
+						{/block:IfFeaturedText2}
+						{block:IfFeaturedText3}
+						<div class="featuredImage" style="color: {color:Featured Color 3};border-color: {color:Featured Color 3};">
+							{block:IfFeaturedLink3}<a href="{text:Featured Link 3}" target="_blank">{/block:IfFeaturedLink3}
+								{block:IfFeaturedImage3Image}<img src="{image:Featured Image 3}" alt="{text:Featured Text 3}" />{/block:IfFeaturedImage3Image}
+								{block:IfNotFeaturedImage3Image}{text:Featured Text 3}{/block:IfNotFeaturedImage3Image}
+							{block:IfFeaturedLink3}</a>{/block:IfFeaturedLink3}
+						</div>
+						{/block:IfFeaturedText3}
+						{block:IfFeaturedText4}
+						<div class="featuredImage" style="color: {color:Featured Color 4};border-color: {color:Featured Color 4};">
+							{block:IfFeaturedLink4}<a href="{text:Featured Link 4}" target="_blank">{/block:IfFeaturedLink4}
+								{block:IfFeaturedImage4Image}<img src="{image:Featured Image 4}" alt="{text:Featured Text 4}" />{/block:IfFeaturedImage4Image}
+								{block:IfNotFeaturedImage4Image}{text:Featured Text 4}{/block:IfNotFeaturedImage4Image}
+							{block:IfFeaturedLink4}</a>{/block:IfFeaturedLink4}
+						</div>
+						{/block:IfFeaturedText4}
+						
 						<div style="display: inline-block; width: 500px; max-width: 100%; overflow: hidden; position: relative; top: -3px;">
 							<div class="fb-page" data-href="https://www.facebook.com/RITSTARfest/" data-tabs="timeline" data-width="500" data-height="700" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true">
 								<div class="fb-xfbml-parse-ignore">
