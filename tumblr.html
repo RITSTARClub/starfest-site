@@ -54,6 +54,9 @@
 	<meta name="text:Facebook URL" content="https://www.facebook.com/RITSTARfest" />
 	<meta name="text:Twitter URL" content="https://twitter.com/RITSTARfest" />
 	
+	<meta name="text:LogoLineHeight" content="160" />
+	<meta name="text:LogoMaxWidth" content="602" />
+	
 	<meta name="image:Header" content="" />
 	<meta name="image:HeaderLine" content="" />
 	<meta name="image:BackgroundTile" content="" />
@@ -161,9 +164,9 @@
 		
 		hr {
 			background-color: {color:Accent};
-			-webkit-box-shadow: 0 0 6px 1px rgba(51,181,229,0.8);
-			   -moz-box-shadow: 0 0 6px 1px rgba(51,181,229,0.8);
-			        box-shadow: 0 0 6px 1px rgba(51,181,229,0.8);
+			-webkit-box-shadow: 0 0 6px 1px {color:Accent};
+			   -moz-box-shadow: 0 0 6px 1px {color:Accent};
+			        box-shadow: 0 0 6px 1px {color:Accent};
 			border: 0 none;
 			height: 1px;
 			width: 576px;
@@ -182,17 +185,13 @@
 			font-family: {font:Title}, sans-serif;
 			text-shadow: 0px 0px 12px {color:Link};
 			
-			background-color: {color:Background};
 			background-image: url({image:HeaderLine});
-			background-size: 1px 165.5px;
+			background-size: 1px {text:LogoLineHeight}px;
 			background-repeat: repeat-x;
-			-webkit-box-shadow: 0 0 16px 16px black;
-			   -moz-box-shadow: 0 0 16px 16px black;
-			        box-shadow: 0 0 16px 16px black;
 		}
 			#title img {
 				margin: 0;
-				width: 603px;
+				width: {text:LogoMaxWidth}px;
 				max-width: 100%;
 			}
 			#title a {
