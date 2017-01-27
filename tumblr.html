@@ -45,6 +45,7 @@
 	<meta name="font:Body" content="Roboto" />
 	<meta name="font:Accent" content="Futura" />
 	
+	<meta name="if:Hide Tumblr Buttons" content="0" />
 	<meta name="if:Show People I Follow" content="0" />
 	<meta name="if:Show Tags" content="0" />
 	<meta name="if:Show Album Art on Audio Posts" content="1" />
@@ -125,9 +126,11 @@
 	
 	<style type="text/css">
 		/* Hide Tumblr bar */
+		{block:IfHideTumblrButtons}
 		.tmblr-iframe {
 			display: none;
 		}
+		{/block:IfHideTumblrButtons}
 		
 		body {
 			background-color: {color:Background};
