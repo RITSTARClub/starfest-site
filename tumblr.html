@@ -51,8 +51,9 @@
 	<meta name="if:Show Album Art on Audio Posts" content="1" />
 	<meta name="if:Enable Jump Pagination" content="0" />
 	
-	<meta name="text:Google Plus URL" content="https://plus.google.com/+RITSTARfest" />
 	<meta name="text:Facebook URL" content="https://www.facebook.com/RITSTARfest" />
+	<meta name="text:Google Plus URL" content="https://plus.google.com/+RITSTARfest" />
+	<meta name="text:Instagram URL" content="https://www.instagram.com/RITSTARfest" />
 	<meta name="text:Twitter URL" content="https://twitter.com/RITSTARfest" />
 	
 	<meta name="text:LogoLineHeight" content="160" />
@@ -61,8 +62,9 @@
 	<meta name="image:Header" content="" />
 	<meta name="image:HeaderLine" content="" />
 	<meta name="image:BackgroundTile" content="" />
-	<meta name="image:GooglePlusIcon" content="" />
 	<meta name="image:FacebookIcon" content="" />
+	<meta name="image:GooglePlusIcon" content="" />
+	<meta name="image:InstagramIcon" content="" />
 	<meta name="image:TwitterIcon" content="" />
 	
 	<meta name="text:Featured Text 1" content="" />
@@ -704,8 +706,9 @@
 		{block:AskEnabled}<a href="/ask">Ask</a>{/block:AskEnabled}
 		{block:SubmissionsEnabled}<a href="/submit">{SubmitLabel}</a>{/block:SubmissionsEnabled}
 		<span class="social">
-			{block:IfGooglePlusURL}<a href="{text:Google Plus URL}" target="_blank" title="Google+"><img src="{image:GooglePlusIcon}" alt="Google+" /></a>{/block:IfGooglePlusURL}
 			{block:IfFacebookURL}<a href="{text:Facebook URL}" target="_blank" title="Facebook"><img src="{image:FacebookIcon}" alt="Facebook" /></a>{/block:IfFacebookURL}
+			{block:IfGooglePlusURL}<a href="{text:Google Plus URL}" target="_blank" title="Google+"><img src="{image:GooglePlusIcon}" alt="Google+" /></a>{/block:IfGooglePlusURL}
+			{block:IfInstagramURL}<a href="{text:Instagram URL}" target="_blank" title="Instagram"><img src="{image:InstagramIcon}" alt="Instagram" /></a>{/block:IfInstagramURL}
 			{block:IfTwitterURL}<a href="{text:Twitter URL}" target="_blank" title="Twitter"><img src="{image:TwitterIcon}" alt="Twitter" /></a>{/block:IfTwitterURL}
 		</span>
 		
